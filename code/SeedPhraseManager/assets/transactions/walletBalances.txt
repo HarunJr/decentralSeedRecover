@@ -1,0 +1,4 @@
+                           TxHash                                 TxIx        Amount
+--------------------------------------------------------------------------------------
+65ae6767cd1ff1a98bb7a6af7685fa3af6391a249120989a632f9cebefde7a3c     1        2000000 lovelace + 1 e7dead6832c231533ca65c289b4b1a522b086dd7cc333e9216825101.426f72726f774e4654 + TxOutDatumHash ScriptDataInBabbageEra "5f727bd965b57125557d9c2a6d20823f6cae1018edc25bb8d9bc24629c167954"
+65ae6767cd1ff1a98bb7a6af7685fa3af6391a249120989a632f9cebefde7a3c     2        9683735875 lovelace + TxOutDatumNone
