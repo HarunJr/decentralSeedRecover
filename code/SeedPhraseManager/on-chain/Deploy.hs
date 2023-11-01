@@ -22,7 +22,7 @@ import           Cardano.Api.Shelley ( fromPlutusData )
 
 import qualified SeedPhraseManager            as OnChain
 
-import           Utilities                 (writeValidatorToFile)
+import           Utilities                 (writeValidatorToFile, writeCodeToFile)
 
 main :: IO ()
 main = do
@@ -30,6 +30,7 @@ main = do
     writeContractDatum
 
     _ <- writeValidatorScript
+    _ <- writeLucidValidatorScript
 
     return ()
 
@@ -90,4 +91,7 @@ seedPhraseParam =  OnChain.SeedPhraseParam {
 
 writeValidatorScript :: IO ()
 writeValidatorScript =  writeValidatorToFile (basePath++"plutus-scripts/seed-phrase.plutus") $ OnChain.requestValidator seedPhraseParam
+
+writeLucidValidatorScript :: IO ()
+writeLucidValidatorScript =  writeCodeToFile (basePath++"plutus-scripts/lucid-seed-phrase.plutus") OnChain.validatorCode
 

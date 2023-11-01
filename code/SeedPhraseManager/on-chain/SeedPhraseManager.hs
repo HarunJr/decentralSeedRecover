@@ -17,6 +17,7 @@ module SeedPhraseManager
   ( SeedPhraseParam (..)
   , SeedPhraseDatum (..)
   , requestValidator
+  , validatorCode
   ) where
 
 -- import           Data.Maybe                (fromJust)
@@ -93,6 +94,10 @@ mkWrappedValidatorLucid pIHash = wrap $ mkRequestValidator cp
 
 validatorCode :: CompiledCode (BuiltinData -> BuiltinData -> BuiltinData -> BuiltinData -> ())
 validatorCode = $$( compile [|| mkWrappedValidatorLucid ||])
+
+-- saveLucidCode :: IO ()
+-- saveLucidCode = writeCodeToFile "assets/plutus-scripts/lucid-nft.plutus" nftCode
+
 
 -- script :: SeedPhraseParam -> Plutus.Script
 -- script = Plutus.unValidatorScript . validatorHash

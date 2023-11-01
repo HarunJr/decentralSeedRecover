@@ -18,7 +18,7 @@ common lang
 
 library
     import:             lang
-    hs-source-dirs:     lecture
+    hs-source-dirs:     on-chain
     
     exposed-modules:    Deploy
                         SeedPhraseManager
